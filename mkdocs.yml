@@ -30,9 +30,27 @@ markdown_extensions:
   - abbr
   - attr_list
   - pymdownx.snippets
-  - admonition
+  # - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.blocks.admonition:
+      types:
+        - note
+        - abstract
+        - info
+        - tip
+        - success
+        - question
+        - warning
+        - failure
+        - danger
+        - bug
+        - example
+        - quote
+        - definition
+        - proposition
+        - lemma
+        - theorem
   - pymdownx.arithmatex:
       generic: true
 
