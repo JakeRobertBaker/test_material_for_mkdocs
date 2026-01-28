@@ -1,0 +1,41 @@
+/* Custom admonitions: definition, proposition, lemma, theorem */
+
+/* Definition - uses note color (#448aff) */
+.md-typeset .admonition.definition,
+.md-typeset details.definition {
+  border-color: rgb(68, 138, 255);
+}
+.md-typeset .definition > .admonition-title,
+.md-typeset .definition > summary {
+  background-color: rgba(68, 138, 255, 0.1);
+}
+
+/* Proposition - uses tip color (#00bfa5) */
+.md-typeset .admonition.proposition,
+.md-typeset details.proposition {
+  border-color: rgb(0, 191, 165);
+}
+.md-typeset .proposition > .admonition-title,
+.md-typeset .proposition > summary {
+  background-color: rgba(0, 191, 165, 0.1);
+}
+
+/* Lemma - uses success color (#00c853) */
+.md-typeset .admonition.lemma,
+.md-typeset details.lemma {
+  border-color: rgb(0, 200, 83);
+}
+.md-typeset .lemma > .admonition-title,
+.md-typeset .lemma > summary {
+  background-color: rgba(0, 200, 83, 0.1);
+}
+
+/* Theorem - uses question color (#64dd17) */
+.md-typeset .admonition.theorem,
+.md-typeset details.theorem {
+  border-color: rgb(100, 221, 23);
+}
+.md-typeset .theorem > .admonition-title,
+.md-typeset .theorem > summary {
+  background-color: rgba(100, 221, 23, 0.1);
+}
