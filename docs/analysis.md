@@ -42,6 +42,13 @@ If $f$ is continuous on $[a,b]$ and $f(a) \neq f(b)$, then for every value $y$
 between $f(a)$ and $f(b)$, there exists $c \in (a,b)$ such that $f(c) = y$.
 ///
 
+/// proof | Proof of Theorem 2.3
+Suppose $f(a) < f(b)$ and let $y$ satisfy $f(a) < y < f(b)$. Define
+$S = \{x \in [a,b] : f(x) < y\}$. Since $a \in S$, the set is non-empty, and
+it is bounded above by $b$. Let $c = \sup S$. By continuity of $f$ at $c$,
+we conclude $f(c) = y$. $\blacksquare$
+///
+
 ## Cross References
 
 [Lagrange's Theorem]: ./blocks_admonition_example.md#thm-lagrange

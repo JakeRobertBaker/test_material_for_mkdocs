@@ -48,6 +48,12 @@ $|H|$ divides $|G|$. Moreover, the number of left cosets of
 $H$ in $G$ equals $|G| / |H|$.
 ///
 
+/// proof | Proof of Theorem 4.2
+Let $H$ be a subgroup of a finite group $G$. The left cosets of $H$ in $G$
+partition $G$, and each coset has exactly $|H|$ elements. If there are $k$
+distinct cosets, then $|G| = k \cdot |H|$, so $|H|$ divides $|G|$. $\blacksquare$
+///
+
 ## Cross References
 
 [Lagrange's Theorem]: #thm-lagrange

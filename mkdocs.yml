@@ -31,8 +31,11 @@ markdown_extensions:
   - attr_list
   - pymdownx.snippets
   # - admonition
-  - pymdownx.details
+  # - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.blocks.details:
+      types:
+        - proof
   - pymdownx.blocks.admonition:
       types:
         - note

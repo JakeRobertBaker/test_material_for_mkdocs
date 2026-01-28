@@ -1,4 +1,4 @@
-/* Custom admonitions: definition, proposition, lemma, theorem */
+/* Custom admonitions: definition, proposition, lemma, theorem, proof */
 
 /* Definition - uses note color (#448aff) */
 .md-typeset .admonition.definition,
@@ -38,4 +38,12 @@
 .md-typeset .theorem > .admonition-title,
 .md-typeset .theorem > summary {
   background-color: rgba(100, 221, 23, 0.1);
+}
+
+/* Proof - uses quote color (#9e9e9e) */
+.md-typeset details.proof {
+  border-color: rgb(158, 158, 158);
+}
+.md-typeset .proof > summary {
+  background-color: rgba(158, 158, 158, 0.1);
 }
