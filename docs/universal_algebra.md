@@ -139,17 +139,6 @@ $$
 
 ///
 
-/// example | Derived Operations in X terms
-    attrs: {id: exm-trivial_derived_interpretation}
-
-When considering interpretation of
-
-Let $t[u / x_i]$ denote replacing symbol $x_i$ with $u$ where $x_i$ appears in $t$.
-$$
-t_A (\underline{u}) =
-$$
-///
-
 /// definition | n-ary Equation
     attrs: {id: def-nary_equation}
 
@@ -233,9 +222,13 @@ Let $[t]$ denote the equivalence class of $t \in F_{\Omega}(X)$
 
 **Part I**
 
-In part(i) we need to show that this indeed an $\Omega$ structure. This requires showing that the interpretation of $\Omega$ operations in $F_{\Omega}(X)$ respects the equivanece relation:
+We need to show that this indeed an $\Omega$ structure. This requires showing that the interpretation of $\Omega$ operations in $F_{\Omega}(X)$ respects the equivalence relation.
 
-Consider operation $\omega \in \Omega$ with $\alpha(\omega)=n$ and symbols $t_1,\dots, t_n$ and $s_1, \dots, s_n$ where $t_i \sim_{E} s_i \forall i \in \{1, \dots, n$.
+Let $FX=F_{\Omega}(X)$ and $EX=F_{(\Omega, E)}(X)$.
+
+In other words we need to show that the interpretation $\omega_{EX}(\underline{u})=[\omega_{FX}(\underline{u})]$ is well defined.
+
+Consider operation $\omega \in \Omega$ with $\alpha(\omega)=n$ and symbols $t_1,\dots, t_n$ and $s_1, \dots, s_n$ where $t_i \sim_{E} s_i$.
 
 We need to show that the operations result is the same regardless of the representative picked for each equivalence class:
 
@@ -264,18 +257,78 @@ $$
 
 Hence we have a valid interpretation that respects the equivalence relation.
 
-We have just shown that the interpretation $\omega_{A'}(\underline{u})=[\omega_A(u)]$ is well defined.
+It then follows by induction that the derived operations also have a well defined interpretation.
 
-The next part we need to show is that all equations in $E$ are satisfied.
-
-Consider $\left( s=t \right) \in E$ where $s,t \in A = F_{\Omega}(X_n)$
-
-Then the interpretation of $s$ in $A$ sends $[\underline{u}] \in F_{(\Omega, E)}(X), u \in F_{\Omega}(X_n)$ as follows,
+Let $t=\omega t_1 \dots t_m$, then for any $\underline{u} \in FX^n$
 
 $$
 \begin{align*}
-s_A ([\underline{u}])
+\text{[definition of derived operation] }
+t_{EX} \left( \underline{u} \right)
+&=
+\omega_{EX}
+\left(
+{t_1}_{EX} \left( \underline{u} \right)
+,\dots,
+{t_m}_{EX} \left( \underline{u} \right)
+\right)
+\\
+\text{[inductive hypothesis] }
+&=
+\omega_{EX}
+\left(
+[{t_1}_{FX} \left( \underline{u} \right)]
+,\dots,
+[{t_m}_{FX} \left( \underline{u} \right)]
+\right)
+\\
+\text{[definition of operations in } EX \text{] }
+&=
+\left[
+\omega_{FX} \left({t_1}_{FX} \left( \underline{u} \right)
+,\dots,
+{t_m}_{FX} \left( \underline{u} \right)
+\right)
+\right]
+\\
+&= [t_{FX}(\underline{u})]
 \end{align*}
 $$
 
+Hence $t_{EX}(\underline{u}) = [t_{FX}(\underline{u})]$. $(\text{**})$
+
+It is kind of immediate that this follow by induction. I wanted to be really verbose.
+
+The next part we need to show is that all equations in $E$ are satisfied.
+
+Consider equation $\left( s=t \right) \in E$ where $s,t \in F = F_{\Omega}(X_n)$.
+
+We want to show that this equation is satisfied in $EX=F_{(\Omega, E)}(X)$, i.e $s_{EX}=t_{EX}$
+
+For any $\underline{u} \in FX^n$
+
+$$
+\begin{align*}
+\text{[by (**)] }
+s_{EX}(\underline{u})
+&=
+\left[ s_{FX} (\underline{u}) \right]
+\\
+\text{[see example]}
+&=
+\left[ s\left[ u_1/x_1, \dots u_n/x_n \right] \right]
+\\
+\text{[substitution 3a repeated } n \text{ times]}
+&=
+\left[ t\left[ u_1/x_1,\dots,u_n/x_n \right] \right]
+\\ &=
+\left[ t_{FX} \left( \underline{u} \right) \right]
+\\ &=
+t_{EX} \left( \underline{u} \right)
+\end{align*}
+$$
+
+**Part II**
+
+Let $\hat{E} = \left\{ \left( s=t \right) : h(s)=h(t) \text{ for any homomorphism } h: F_{\Omega}(X) → \left( \Omega, E \right) -\text{Model } A \right\}$
 ///
