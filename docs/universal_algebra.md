@@ -331,4 +331,94 @@ $$
 **Part II**
 
 Let $\hat{E} = \left\{ \left( s=t \right) : h(s)=h(t) \text{ for any homomorphism } h: F_{\Omega}(X) → \left( \Omega, E \right) -\text{Model } A \right\}$
+
+Let's recall some facts:
+
+- All homomorphisms from $F_{\Omega}(X)$ to $A$ just fill in the symbols $x_1,\dots x_n$ from template $t \in F_{\Omega}(X_n)$ with some choice of $a_1, \dots, a_n$.
+
+- Any homomorphism from $F_{\Omega}(X)$ to some structure $A$ is uniquely defined by $h(x_i)$ for $i=1,\dots,n$
+
+We shall show that the closure properties of $\tilde{E}$ [definition](#def-XEquivalence}) are satisfied.
+
+Definition part 1.
+
+It is kind of obvious that $s=s_{FX} \left( x_1, \dots, x_i, \dots, x_n \right)$.
+
+Suppose $s=t \in \tilde{E}$ then
+
+$$
+\begin{align*}
+h(s) &= h(s_{FX}(x_1, \dots, x_n))
+\\
+&=
+s_A \left( h(x_1), \dots, h(x_n) \right)
+\\
+[\text{equations in } \tilde{E} \text{ are true for model } A]
+&=
+t_A \left( h(x_1), \dots, h(x_n) \right)
+\\
+&= h(t)
+\end{align*}
+$$
+
+Definition part 2 RST is easy.
+
+Definition part 3a.
+
+Fix $i$, let $\left( s=t \right) \in \hat{E}$, $h$ be some homomorphism from $F_{\Omega}(X)$ to $A$ and $h'$ be the uniquely defined homomorphism that sends $x_i$ to $h(u)$ and $x_j$ to $h(x_j)$ for $i \neq j$.
+
+It is also kinda obvious that $s[u/x_i]= s_{FX} \left( x_1,\dots,u,\dots x_n   \right)$.
+
+Therefore,
+
+$$
+\begin{align*}
+h \left( s \left[ u/x_i \right] \right)
+&=
+h \left( s_{FX} \left( x_1,\dots,u,\dots,x_n \right) \right)
+\\
+\text{[homomorphism]} &=
+s_{A} \left( h(x_1), \dots, h(u), \dots, h(x_n) \right)
+\\
+&=
+s_{A} \left( h'(x_1), \dots, h'(x_i), \dots h'(x_n) \right)
+\\
+\text{[homomorphism]}
+&=
+h' \left( s_{FX} \left( x_1,\dots,x_i,\dots,x_n \right) \right)
+\\
+&=
+h'(s)
+\\
+\text{[s and t agree on any homomorphism]}
+&=
+h'(t)
+\\ \dots \\
+&=
+h \left( t \left[ u/x_i \right] \right)
+\end{align*}
+$$
+
+Definition part 3b.
+
+Given $s=t \in \hat{E}$ we want to show that $h \left( u \left[ t/x_i \right] \right) = h \left( u \left[ s/x_i \right] \right)$
+
+$$
+\begin{align*}
+h \left( u \left[ t/x_i \right] \right)
+&=
+h \left( u_{FX} \left( x_1, \dots, t, \dots, x_n \right) \right)
+\\
+&=
+u_A \left( h(x_1), \dots, h(t), \dots, h(x_n) \right)
+\\
+[ \text{since }h(s)=h(t)]
+&=
+u_A \left( h(x_1), \dots, h(s), \dots, h(x_n) \right)
+\\
+&=
+h \left( u \left[ t/x_i \right] \right)
+\end{align*}
+$$
+
 ///
