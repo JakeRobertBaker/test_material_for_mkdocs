@@ -338,7 +338,7 @@ Let's recall some facts:
 
 - Any homomorphism from $F_{\Omega}(X)$ to some structure $A$ is uniquely defined by $h(x_i)$ for $i=1,\dots,n$
 
-We shall show that the closure properties of $\tilde{E}$ [definition](#def-XEquivalence}) are satisfied.
+We shall show that the closure properties of $\tilde{E}$ [definition](#def-XEquivalence) are satisfied.
 
 Definition part 1.
 
